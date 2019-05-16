@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <video id="video" ></video>
+    <script src="https://cdn.bootcss.com/flv.js/1.5.0/flv.js"></script>
+    <script>
+        if (flvjs.isSupported()) {
+            var videoElement = document.getElementById('video');
+            var flvPlayer = flvjs.createPlayer({
+                type: 'flv',
+                url: './《DOTA2》 震中杯2018 主赛事 开幕式纯CG版（1080p）[超清版].flv'
+            });
+            flvPlayer.attachMediaElement(videoElement);
+            flvPlayer.load();
+            flvPlayer.play();
+        }
+    </script>
+</body>
+</html>
